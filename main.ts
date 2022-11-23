@@ -79,3 +79,20 @@ basic.forever(function () {
     	
     }
 })
+basic.forever(function () {
+    basic.showLeds(`
+        # . . . .
+        # # . . .
+        # # # . .
+        # # . . .
+        # . . . .
+        `)
+    basic.showString("" + (pins.digitalReadPin(DigitalPin.P0)))
+    basic.showLeds(`
+        . . . . #
+        . . . # #
+        . . # # #
+        . . . # #
+        . . . . #
+        `)
+})
