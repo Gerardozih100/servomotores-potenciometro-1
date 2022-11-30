@@ -1,4 +1,7 @@
 let pote = 0
+let pote1 = 0
+let pote2 = 0
+let pote3 = 0
 basic.forever(function () {
     pote = pins.analogReadPin(AnalogPin.P0) / 4
     if (pote >= 220) {
@@ -20,7 +23,7 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    pote = pins.analogReadPin(AnalogPin.P1) / 4
+    pote1 = pins.analogReadPin(AnalogPin.P1) / 4
     if (pote >= 220) {
         pins.servoWritePin(AnalogPin.P13, 140)
     } else if (pote >= 190 && pote < 220) {
@@ -40,7 +43,7 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    pote = pins.analogReadPin(AnalogPin.P2) / 4
+    pote2 = pins.analogReadPin(AnalogPin.P2) / 4
     if (pote >= 220) {
         pins.servoWritePin(AnalogPin.P14, 140)
     } else if (pote >= 190 && pote < 220) {
@@ -60,7 +63,7 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    pote = pins.analogReadPin(AnalogPin.P3) / 4
+    pote3 = pins.analogReadPin(AnalogPin.P3) / 4
     if (pote >= 220) {
         pins.servoWritePin(AnalogPin.P15, 140)
     } else if (pote >= 190 && pote < 220) {
